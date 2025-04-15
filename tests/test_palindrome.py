@@ -18,6 +18,15 @@ class TestPalindrome(unittest.TestCase):
         self.assertFalse(is_palindrome("computación"))
         self.assertFalse(is_palindrome("Ojalá apruebe computación"))
         self.assertFalse(is_palindrome("No es un palíndromo"))
-        
+
+    def edge_cases(self):
+        self.assertTrue(is_palindrome(""))
+        self.assertTrue(is_palindrome("a"))
+        self.assertTrue(is_palindrome("   "))
+        self.assertTrue(is_palindrome("Anita lava la tina"))
+        self.assertTrue(is_palindrome("A man, a plan, a canal: Panama!"))
+        self.assertTrue(is_palindrome("!@#$%^&*()_+"))
+        self.assertTrue(is_palindrome("12321"))
+
 if __name__ == '__main__':
     unittest.main()
